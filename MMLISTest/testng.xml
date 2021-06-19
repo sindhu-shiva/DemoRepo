@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MMLIS Automation Suite">
+  <test name="MMLIS Test cases">
+    <classes>
+      <class name="com.MMLIS.qa.testcases.LoginPageTest"/>
+      <class name="com.MMLIS.qa.testcases.ContactsWeqTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
