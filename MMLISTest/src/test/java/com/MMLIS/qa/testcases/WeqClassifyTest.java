@@ -8,13 +8,15 @@ import org.testng.annotations.Test;
 import com.MMLIS.qa.base.TestBase;
 import com.MMLIS.qa.pages.ContactsPage;
 import com.MMLIS.qa.pages.LoginPage;
+import com.MMLIS.qa.pages.WeqClassify;
 
-public class WeqClassify extends TestBase{
+public class WeqClassifyTest extends TestBase{
 	LoginPage lp;
 	ContactsPage cp;
-	WeqClassify weqC;
+	WeqclassTest weqC;
+	WeqClassify weqCla;
 	
-	WeqClassify()
+	WeqClassifyTest()
 	{
 		super();
 	}
@@ -25,8 +27,9 @@ public class WeqClassify extends TestBase{
 		
 		initialization();
 		lp= new LoginPage();
-		weqC= new WeqClassify();
+		weqC= new WeqclassTest();
 		cp=lp.login(obj.getProperty("username"),obj.getProperty("password"));
+		weqCla=cp.clickweqclassify();
 	}
 	
 	
@@ -38,12 +41,29 @@ public class WeqClassify extends TestBase{
 		
 	
 	}
+@Test
+	
+	public void checkweqentrylogoTest() {
+		boolean l= weqCla.checklogo();
+		Assert.assertTrue(l);
 		
+		
+	
+	}
+
+@Test
+
+public void checkbacktoportal() {
+	weqCla.backtoportal();
+	
+	
+
+}
 	
 	
 	@AfterMethod
 	public void teardown(){
-		driver.quit();
+		//driver.quit();
 	}
 	
 
